@@ -4,11 +4,11 @@ Consists in creating a complete VPC and attach it to an EC2 that includes a web 
 
 ## Practice:
 
-1. Create VPC.
-2. Create Internet Gateway.
-3. Create a custom route table.
-4. Create a subnet.
-5. Associate subnet with route table.
+1. Create VPC. [X]
+2. Create Internet Gateway. [X]
+3. Create a custom route table. [X]
+4. Create a subnet. [X]
+5. Associate subnet with route table. [X]
 6. Create a security group that allows inbout ports 22, 80, 443.
 7. Create a network interface with an ip in the subnet (created in step 4).
 8. Create an Elastic IP to the network interface (created in step 7).
