@@ -32,8 +32,8 @@ resource "aws_route_table" "tf-route-table-1" {
   }
 
   route {
-    ipv6_cidr_block        = "::/0"
-    gateway_id = aws_internet_gateway.tf-internet-gateway.id
+    ipv6_cidr_block = "::/0"
+    gateway_id      = aws_internet_gateway.tf-internet-gateway.id
   }
 
 
@@ -57,8 +57,8 @@ resource "aws_route_table" "tf-route-table-2" {
   }
 
   route {
-    ipv6_cidr_block        = "::/0"
-    gateway_id = aws_internet_gateway.tf-internet-gateway.id
+    ipv6_cidr_block = "::/0"
+    gateway_id      = aws_internet_gateway.tf-internet-gateway.id
   }
 
   tags = {
@@ -181,16 +181,16 @@ resource "aws_network_interface" "tf-eni-2" {
 
 resource "aws_eip" "tf-eip-1" {
 
-  domain = "vpc"
+  domain                    = "vpc"
   network_interface         = aws_network_interface.tf-eni-1.id
   associate_with_private_ip = "10.4.1.50"
 
   depends_on = [aws_internet_gateway.tf-internet-gateway]
 
   tags = {
-    Name = "terraform-elastic-ip-for-ec2"
+    Name        = "terraform-elastic-ip-for-ec2"
     Environment = "development"
-    Resource = "elastic-ip"
+    Resource    = "elastic-ip"
     Description = "Elastic IP used for EC2 Instance and created by terraform"
   }
 }

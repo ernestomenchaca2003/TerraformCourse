@@ -17,3 +17,4 @@ Consists in creating a complete VPC and attach it to an EC2 that includes a web 
 ### Extras (pending):
 10. Implement best practices
 11. Use variables
+12. Improve code by using outputs (try using 'terraform outputs' after creation)
